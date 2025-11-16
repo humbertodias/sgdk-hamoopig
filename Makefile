@@ -14,4 +14,4 @@ clean:
 	rm -rf out/* build/* src/boot/*
 
 format:
-	clang-format -i src/*.c inc/*.h
+	clang-format -i src/*.c src/*.cpp inc/*.h

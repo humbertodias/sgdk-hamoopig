@@ -8,11 +8,15 @@
 // SIR MACHO                                                                //
 // TITAN DOOM                                                               //
 //////////////////////////////////////////////////////////////////////////////
+// Converted to C++ with classes                                           //
+//////////////////////////////////////////////////////////////////////////////
 
+extern "C" {
 #include <genesis.h>
-#include "sprite.h"
-#include "gfx.h"
-#include "sound.h"
+}
+#include "res/sprite.h"
+#include "res/gfx.h"
+#include "res/sound.h"
 
 //--- DEFINICOES ---//
 #define RELEASE 0
@@ -217,7 +221,9 @@ u8 defesaIA[9];
 u8 fase;
 u8 faseMAX;
 
-typedef struct {
+// Fireball class - represents a projectile attack
+class Fireball {
+public:
 	Sprite* spriteFBall; //Sprite da Fireball do Player
 	s8 direcao;          //Direcao de propagacao da Fireball (eixo X)
 	u8 speedX;           //Velocidade da Magia (eixo X)
@@ -227,12 +233,14 @@ typedef struct {
 	s16 y;               //Posicao Y da Magia
 	u8  guardFlag;       //Utilizado para verificar qual defesa protege do ataque
 	u16 dataHBox[4];     //Posiconamento das Hit Boxes (caixas vermelhas de ataque)
-} FireballDEF;
+};
 
-struct PlayerDEF {
+// Player class - represents a player character
+class Player {
+public:
 	Sprite* sprite;      //Sprite do Player 
 	Sprite* sombra;      //Sprite (sombra) do Player 
-	FireballDEF fball;   //Fireball do Player
+	Fireball fball;      //Fireball do Player
 	u16 bufferSpecial;
 	int paleta;          //Paleta do personagem
 	u8  palID;           //ID da paleta ativa no momento
@@ -298,11 +306,17 @@ struct PlayerDEF {
 	// 2- mantendo apertado
 	// 3- acabou de soltar
 	u8 key_JOY_status[12];
-}; struct PlayerDEF P[3];
+};
 
-struct GraphicElementDEF {
+// GraphicElement class - represents visual effects and UI elements  
+class GraphicElement {
+public:
 	Sprite* sprite;      //Sprite do Graphic Element
-}; struct GraphicElementDEF GE[25];
+};
+
+// Global player and graphic element arrays
+Player P[3];
+GraphicElement GE[25];
 
 int main() /************** MAIN **************/
 {
