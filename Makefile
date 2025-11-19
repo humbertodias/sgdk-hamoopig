@@ -5,10 +5,10 @@ DOCKER_IMAGE=registry.gitlab.com/doragasu/docker-sgdk:v${SGDK_VERSION}
 
 .PHONY: compile
 compile:
-	docker run -it --rm --user ${UID}:${GID} -v "${PWD}":/workdir -w /workdir --platform linux/amd64 ${DOCKER_IMAGE}
+	docker run -it --rm --user ${UID}:${GID} -v "${PWD}":/workdir -w /workdir ${DOCKER_IMAGE}
 
 shell:
-	docker run -it --rm -v "${PWD}":/workdir -w /workdir --entrypoint=/bin/bash  --platform linux/amd64 ${DOCKER_IMAGE}
+	docker run -it --rm -v "${PWD}":/workdir -w /workdir --entrypoint=/bin/bash ${DOCKER_IMAGE}
 
 clean:
 	rm -rf out/* build/* src/boot/*
