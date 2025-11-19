@@ -220,7 +220,7 @@ Assim, um comando do tipo *if(P[1].key_JOY_START_status==1)* está verificando s
 
 A FUNCAO_FSM faz a troca de estados de acordo com as condições estabelecidas. Estas condições podem ser bem simples, ou bastante complexas dependendo do caso. Um exemplo simples:
 
-```
+```c
 if(gDistancia>64)
 {
     //soco fraco de pe de longe
@@ -238,7 +238,7 @@ que permite colocar um tempo diferente para cada quadro de sua animação, torna
 ­­­
 A PLAYER_STATE é provavelmente uma das funcoes mais importantes, ao lado da FSM. É nela que configuramos os parâmetros dos nossos personagens. Vejamos:
 
-```
+```c
 if(P[Player].id==1)
 {
     if(State==100)
