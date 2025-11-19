@@ -1,3 +1,5 @@
+[![Wiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/humbertodias/sgdk-hamoopig)
+
 # HAMOOPIG
 
  A **Sega Genesis\Mega Drive** engine for *fighting games*!
