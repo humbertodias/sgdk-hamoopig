@@ -1,0 +1,33 @@
+<map id="FUNCAO_FSM" name="FUNCAO_FSM">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,265,112,295"/>
+<area shape="rect" id="Node000002" href="$fsm_8c.html#a266fdbbb37988b16123f276452a268ea" title=" " alt="" coords="183,112,364,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,263,237,149,240,153,83,267"/>
+<area shape="rect" id="Node000006" href="$player_8c.html#afc38b16c5646448129cadbef7e651a46" title=" " alt="" coords="659,241,768,271"/>
+<area shape="poly" id="edge18_Node000001_Node000006" title=" " alt="" coords="112,267,159,260,294,251,428,247,644,250,644,256,428,253,294,256,160,265,112,272"/>
+<area shape="rect" id="Node000011" href="$fsm_8c.html#a4bba3c45e576b2a753132b279e07dabc" title=" " alt="" coords="440,267,607,296"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="112,278,424,279,424,284,112,283"/>
+<area shape="rect" id="Node000012" href="$fsm_8c.html#a6137d227d8f0f76f7196a37bac081a98" title=" " alt="" coords="160,317,387,347"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="113,290,195,310,193,316,112,296"/>
+<area shape="rect" id="Node000013" href="$fsm_8c.html#a67c73f463b114db6cf1092716386c50a" title=" " alt="" coords="192,371,355,419"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="77,293,114,325,161,357,178,365,176,370,158,361,111,329,74,298"/>
+<area shape="rect" id="Node000003" href="$collision_8c.html#a0714644e1f672d0f516226a473052962" title=" " alt="" coords="436,5,610,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,109,361,78,434,44,451,38,453,43,436,49,363,82,303,114"/>
+<area shape="rect" id="Node000004" href="$collision_8c.html#aa569d8c118b30dead088facccf096bd5" title=" " alt="" coords="456,59,591,88"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="346,109,440,88,441,94,347,114"/>
+<area shape="rect" id="Node000005" href="$player_8c.html#ad3d721a8bfd1f35204f5d83b1a7ecc2f" title=" " alt="" coords="435,112,611,142"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="365,124,419,124,419,130,365,130"/>
+<area shape="poly" id="edge11_Node000002_Node000006" title=" " alt="" coords="354,140,476,168,612,208,669,232,667,237,610,213,475,173,353,145"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="576,140,613,158,656,192,691,228,688,231,653,196,610,162,574,145"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="680,242,675,232,680,223,693,217,714,215,736,217,748,224,745,228,734,222,713,220,694,222,683,227,681,232,685,240"/>
+<area shape="rect" id="Node000007" href="$player_8c.html#a44e0381c805a7e4567470a55d26a8a79" title=" " alt="" coords="842,161,965,191"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="740,238,815,200,831,194,833,199,817,205,742,243"/>
+<area shape="rect" id="Node000008" href="$fsm_8c.html#a8dc07c5c2dae97d1b82661d7cb207a39" title=" " alt="" coords="816,215,991,244"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="768,246,800,241,800,247,768,251"/>
+<area shape="rect" id="Node000009" href="$player_8c.html#a941dc6b35efb4001faffc2a17e34f4f5" title=" " alt="" coords="831,268,976,298"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="768,261,816,268,815,273,768,266"/>
+<area shape="rect" id="Node000010" href="$graphics_8c.html#a278eb368166f3a301f3a07ef48036d39" title=" " alt="" coords="818,321,989,351"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="742,269,817,307,833,313,831,318,815,312,740,274"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="607,268,643,263,644,268,608,273"/>
+<area shape="poly" id="edge15_Node000012_Node000006" title=" " alt="" coords="387,333,497,326,554,318,611,306,644,293,675,277,678,281,647,298,612,311,555,324,497,332,387,338"/>
+<area shape="poly" id="edge17_Node000013_Node000006" title=" " alt="" coords="355,391,414,386,479,377,546,361,610,338,652,311,687,280,690,284,656,316,613,343,548,366,480,382,414,392,356,396"/>
+</map>

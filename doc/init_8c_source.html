@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SGDK Hamoopig: Código-Fonte de src/init.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SGDK Hamoopig
+   </div>
+   <div id="projectbrief">Documentação gerada automaticamente com Doxygen</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">init.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="init_8c.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;genesis.h&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;init.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;globals.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;gfx.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;sprite.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="init_8c.html#aed24219971f7ba81ad8f567b2129a68d">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="init_8c.html#aed24219971f7ba81ad8f567b2129a68d">FUNCAO_INICIALIZACAO</a>()</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_variable" href="globals_8c.html#a7db0859ee62e2447701751d5980ede35">gPodeMover</a>=0;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_variable" href="globals_8c.html#af9161c41cf984be2afa953b0311565b9">doubleHitStep</a>=0;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">//BG_B</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a>=1; <span class="comment">//Antes de carregar o Background, definir o ponto de inicio de carregamento na VRAM</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">//Load the tileset &#39;BGB1&#39;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ae52d60a289b03a148ab9a58ac7f20e99">gBG_Choice</a>==1){ </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a> = 512; <span class="comment">// Largura do Cenario em pixels!</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="globals_8c.html#aa2d51ef9576be55b8a1ff672efbd0009">gScrollValue</a>=-(<a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a>-320)/2;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        VDP_loadTileSet(gfx_bgb1.tileset,<a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a>,DMA); </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        VDP_setTileMapEx(BG_B,gfx_bgb1.tilemap,TILE_ATTR_FULL(PAL0,0,FALSE,FALSE,<a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a>),0,0,0,0,<a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a>/8,28,DMA_QUEUE);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        PAL_setPalette(PAL0, gfx_bgb1.palette-&gt;data, CPU);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a> += gfx_bgb1.tileset-&gt;numTile;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    } </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//Load the tileset &#39;BGB2&#39;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ae52d60a289b03a148ab9a58ac7f20e99">gBG_Choice</a>==2){ </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a> = 512; <span class="comment">// Largura do Cenario em pixels!</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_variable" href="globals_8c.html#aa2d51ef9576be55b8a1ff672efbd0009">gScrollValue</a>=-(<a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a>-320)/2;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        VDP_loadTileSet(gfx_bgb2.tileset,<a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a>,DMA); </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        VDP_setTileMapEx(BG_B,gfx_bgb2.tilemap,TILE_ATTR_FULL(PAL0,0,FALSE,FALSE,<a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a>),0,0,0,0,<a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a>/8,28,DMA_QUEUE);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        PAL_setPalette(PAL0, gfx_bgb2.palette-&gt;data, CPU);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a> += gfx_bgb2.tileset-&gt;numTile;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    } </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">//load palette HUD in PAL1, GFX load AFTER round intro...</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//PALETA DA HUD!!!</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    PAL_setPalette(PAL1, spr_point.palette-&gt;data, CPU); </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    u8 divisoes = 22;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="globals_8c.html#a5247eaf92fd554713f0a10c89608d6de">gAlturaPiso</a> = (224/divisoes)*divisoes-1; <a class="code hl_variable" href="globals_8c.html#a5247eaf92fd554713f0a10c89608d6de">gAlturaPiso</a>-=4;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">for</span>(<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>=1; <a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>&lt;=2; <a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>++) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].key_JOY_countdown[2]=0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].key_JOY_countdown[4]=0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].key_JOY_countdown[6]=0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].key_JOY_countdown[8]=0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">//P1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].energia = 96;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].energiaBase = 96;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].energiaSP = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].rageTimerCountdown=RAGETIMER;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].wins = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].x = (<a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a>/2)-80; <span class="comment">//P[1].x = (320/4);</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].y = <a class="code hl_variable" href="globals_8c.html#a5247eaf92fd554713f0a10c89608d6de">gAlturaPiso</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].hitPause = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].direcao = 1;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].state = 610; <span class="comment">//610, Intro State!</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].puloTimer = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].dataMBox[0] = -BODYSPACE;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].dataMBox[1] = -60;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].dataMBox[2] = +BODYSPACE;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].dataMBox[3] = - 1;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].paleta = PAL2;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].cicloInteracoesGravidade = CIGD; <span class="comment">//CIGD eh uma definicao global! ver inicio do codigo</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].cicloInteracoesGravidadeCont = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].fball.active = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].bufferSpecial = 0;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].hitCounter = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].stateMoveType = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">//P2</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].energia = 96;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].energiaBase = 96;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].energiaSP = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].rageTimerCountdown=RAGETIMER;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].wins = 0;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].x = (<a class="code hl_variable" href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a>/2)+80; <span class="comment">//P[2].x = (320/4)*3;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].y = <a class="code hl_variable" href="globals_8c.html#a5247eaf92fd554713f0a10c89608d6de">gAlturaPiso</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].hitPause = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].direcao = -1;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].state = 610; <span class="comment">//610, Intro State!</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].puloTimer = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].dataMBox[0] = -BODYSPACE;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].dataMBox[1] = -60;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].dataMBox[2] = +BODYSPACE;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].dataMBox[3] = - 1;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].paleta = PAL3;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].cicloInteracoesGravidade = CIGD; <span class="comment">//CIGD eh uma definicao global! ver inicio do codigo</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].cicloInteracoesGravidadeCont = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].fball.active = 0;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].bufferSpecial = 0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].hitCounter = 0;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].stateMoveType = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">//Para verificar a vantagem ou desvantagem em relacao aos frames</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_variable" href="globals_8c.html#a4b70e354d37b090ffe408c703a374b5c">frameAdvCounterP1</a> = 0;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_variable" href="globals_8c.html#a7e2a9660c34e6b40d2df44aff1b909da">lastFrameAdvCounterP1</a> = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_variable" href="globals_8c.html#aa63e5fde938bd69af9c1ff953391fb06">frameAdvCounterP2</a> = 0;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_variable" href="globals_8c.html#abc4da9eec154673e173b44efbb6e0ae9">lastFrameAdvCounterP2</a> = 0;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">    P[1].sombra = SPR_addSpriteExSafe(&amp;spr_sombra, P[1].x-P[1].axisX, P[1].y-2, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">    SPR_setVRAMTileIndex(P[1].sombra, 1492); //define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">    if(gSombraStyle==2)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">    {</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">        P[2].sombra = SPR_addSpriteExSafe(&amp;spr_sombra, P[2].x-P[1].axisX, P[2].y-2, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">//reset Graphic Elements</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 1].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 1].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 1].sprite = NULL; }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 2].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 2].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 2].sprite = NULL; }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 3].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 3].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 3].sprite = NULL; }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 4].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 4].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 4].sprite = NULL; }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 5].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 5].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 5].sprite = NULL; }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 6].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 6].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 6].sprite = NULL; }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 7].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 7].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 7].sprite = NULL; }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 8].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 8].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 8].sprite = NULL; }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 9].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 9].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[ 9].sprite = NULL; }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[10].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[10].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[10].sprite = NULL; }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[11].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[11].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[11].sprite = NULL; }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[12].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[12].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[12].sprite = NULL; }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[13].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[13].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[13].sprite = NULL; }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[14].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[14].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[14].sprite = NULL; }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[15].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[15].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[15].sprite = NULL; }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[16].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[16].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[16].sprite = NULL; }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[17].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[17].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[17].sprite = NULL; }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[18].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[18].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[18].sprite = NULL; }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[19].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[19].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[19].sprite = NULL; }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[20].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[20].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[20].sprite = NULL; }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_variable" href="globals_8c.html#a5651fe815d173a5a86a793b794d13ef3">gClockTimer</a>=60; <span class="comment">//Relogio, timer de 1 seg</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_variable" href="globals_8c.html#ae03addf30e910bb48ee839e924562313">gClockLTimer</a>=9; <span class="comment">//Digito esquerdo do Relogio</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_variable" href="globals_8c.html#ad170be56c192cadeaac3dace325d637d">gClockRTimer</a>=9; <span class="comment">//Digito direito do Relogio</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_variable" href="globals_8c.html#aede770889dc166adf3db94177cfcaa66">gRound</a>=1;       <span class="comment">//Round Number</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">if</span>(RELEASE==0)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_variable" href="globals_8c.html#a484d5d423cbda372b4cf0a2c733e0fd1">Rect1BB1_Q1</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a484d5d423cbda372b4cf0a2c733e0fd1">Rect1BB1_Q1</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <a class="code hl_variable" href="globals_8c.html#a123c3ffe37b23dafc147e8c4bd8d558d">Rect1BB1_Q2</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a123c3ffe37b23dafc147e8c4bd8d558d">Rect1BB1_Q2</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <a class="code hl_variable" href="globals_8c.html#a44a91575ebc8901fc142969405ca17b2">Rect1BB1_Q3</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a484d5d423cbda372b4cf0a2c733e0fd1">Rect1BB1_Q1</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <a class="code hl_variable" href="globals_8c.html#abb831196d216e00c50fef2086d8850b2">Rect1BB1_Q4</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a123c3ffe37b23dafc147e8c4bd8d558d">Rect1BB1_Q2</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <a class="code hl_variable" href="globals_8c.html#ace5a7729e83a882830f502bc227ab5b0">Rect1HB1_Q1</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#ace5a7729e83a882830f502bc227ab5b0">Rect1HB1_Q1</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_variable" href="globals_8c.html#ad3529cdb19c88c789b880e8e4968f735">Rect1HB1_Q2</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#ad3529cdb19c88c789b880e8e4968f735">Rect1HB1_Q2</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_variable" href="globals_8c.html#ab8ca96f98551dde009842a3c7449d251">Rect1HB1_Q3</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#ace5a7729e83a882830f502bc227ab5b0">Rect1HB1_Q1</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_variable" href="globals_8c.html#af7a30f8cde192d18da41636ff5053d0e">Rect1HB1_Q4</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#ad3529cdb19c88c789b880e8e4968f735">Rect1HB1_Q2</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <a class="code hl_variable" href="globals_8c.html#a6b9b4efb441ee2a5a57747fc562966dc">Rect2BB1_Q1</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a6b9b4efb441ee2a5a57747fc562966dc">Rect2BB1_Q1</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_variable" href="globals_8c.html#a208dbd85c56bc5660552d2e52240bd54">Rect2BB1_Q2</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a208dbd85c56bc5660552d2e52240bd54">Rect2BB1_Q2</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <a class="code hl_variable" href="globals_8c.html#a934cb595ca1509269398cc5b33679a10">Rect2BB1_Q3</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a6b9b4efb441ee2a5a57747fc562966dc">Rect2BB1_Q1</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_variable" href="globals_8c.html#abafd39367d230d99bb9c581019b6d387">Rect2BB1_Q4</a> = SPR_addSprite(&amp;spr_rect_bb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a208dbd85c56bc5660552d2e52240bd54">Rect2BB1_Q2</a>, 1453); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <a class="code hl_variable" href="globals_8c.html#a6b0492b82c6cf53fe356c13c9dc329ef">Rect2HB1_Q1</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a6b0492b82c6cf53fe356c13c9dc329ef">Rect2HB1_Q1</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_variable" href="globals_8c.html#a5aafcd8db9b652a58a6f2233f22b0bab">Rect2HB1_Q2</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a5aafcd8db9b652a58a6f2233f22b0bab">Rect2HB1_Q2</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_variable" href="globals_8c.html#a99a396bbf6472d01ce3cd6b14b68668b">Rect2HB1_Q3</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a6b0492b82c6cf53fe356c13c9dc329ef">Rect2HB1_Q1</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <a class="code hl_variable" href="globals_8c.html#a75f136ac10ebc3e4c92d0b8ef9ace440">Rect2HB1_Q4</a> = SPR_addSprite(&amp;spr_rect_hb, -8, -8, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a5aafcd8db9b652a58a6f2233f22b0bab">Rect2HB1_Q2</a>, 1454); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#a123c3ffe37b23dafc147e8c4bd8d558d">Rect1BB1_Q2</a>, TRUE);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#a44a91575ebc8901fc142969405ca17b2">Rect1BB1_Q3</a>, TRUE);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#abb831196d216e00c50fef2086d8850b2">Rect1BB1_Q4</a>, TRUE); SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#abb831196d216e00c50fef2086d8850b2">Rect1BB1_Q4</a>, TRUE);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#ad3529cdb19c88c789b880e8e4968f735">Rect1HB1_Q2</a>, TRUE);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#ab8ca96f98551dde009842a3c7449d251">Rect1HB1_Q3</a>, TRUE);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#af7a30f8cde192d18da41636ff5053d0e">Rect1HB1_Q4</a>, TRUE); SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#af7a30f8cde192d18da41636ff5053d0e">Rect1HB1_Q4</a>, TRUE);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#a208dbd85c56bc5660552d2e52240bd54">Rect2BB1_Q2</a>, TRUE);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#a934cb595ca1509269398cc5b33679a10">Rect2BB1_Q3</a>, TRUE);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#abafd39367d230d99bb9c581019b6d387">Rect2BB1_Q4</a>, TRUE); SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#abafd39367d230d99bb9c581019b6d387">Rect2BB1_Q4</a>, TRUE);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#a5aafcd8db9b652a58a6f2233f22b0bab">Rect2HB1_Q2</a>, TRUE);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#a99a396bbf6472d01ce3cd6b14b68668b">Rect2HB1_Q3</a>, TRUE);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#a75f136ac10ebc3e4c92d0b8ef9ace440">Rect2HB1_Q4</a>, TRUE); SPR_setVFlip(<a class="code hl_variable" href="globals_8c.html#a75f136ac10ebc3e4c92d0b8ef9ace440">Rect2HB1_Q4</a>, TRUE);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a484d5d423cbda372b4cf0a2c733e0fd1">Rect1BB1_Q1</a>, 1);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a123c3ffe37b23dafc147e8c4bd8d558d">Rect1BB1_Q2</a>, 1);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a44a91575ebc8901fc142969405ca17b2">Rect1BB1_Q3</a>, 1);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#abb831196d216e00c50fef2086d8850b2">Rect1BB1_Q4</a>, 1);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#ace5a7729e83a882830f502bc227ab5b0">Rect1HB1_Q1</a>, 1);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#ad3529cdb19c88c789b880e8e4968f735">Rect1HB1_Q2</a>, 1);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#ab8ca96f98551dde009842a3c7449d251">Rect1HB1_Q3</a>, 1);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#af7a30f8cde192d18da41636ff5053d0e">Rect1HB1_Q4</a>, 1);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a6b9b4efb441ee2a5a57747fc562966dc">Rect2BB1_Q1</a>, 1);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a208dbd85c56bc5660552d2e52240bd54">Rect2BB1_Q2</a>, 1);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a934cb595ca1509269398cc5b33679a10">Rect2BB1_Q3</a>, 1);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#abafd39367d230d99bb9c581019b6d387">Rect2BB1_Q4</a>, 1);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a6b0492b82c6cf53fe356c13c9dc329ef">Rect2HB1_Q1</a>, 1);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a5aafcd8db9b652a58a6f2233f22b0bab">Rect2HB1_Q2</a>, 1);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a99a396bbf6472d01ce3cd6b14b68668b">Rect2HB1_Q3</a>, 1);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a75f136ac10ebc3e4c92d0b8ef9ace440">Rect2HB1_Q4</a>, 1);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="comment">//Intro State, Player Start</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">//P[1].sprite = SPR_addSpriteExSafe(&amp;spr_point, P[1].x-P[1].axisX, P[1].y-P[1].axisY, TILE_ATTR(PAL2, FALSE, FALSE, FALSE), SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">//P[2].sprite = SPR_addSpriteExSafe(&amp;spr_point, P[2].x-P[2].axisX, P[2].y-P[2].axisY, TILE_ATTR(PAL3, FALSE, FALSE, FALSE), SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_function" href="player_8c.html#afc38b16c5646448129cadbef7e651a46">PLAYER_STATE</a>(1,100);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <a class="code hl_function" href="player_8c.html#afc38b16c5646448129cadbef7e651a46">PLAYER_STATE</a>(2,100);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    SPR_setHFlip(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].sprite, TRUE);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="comment">//Define a paleta dos players...</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].palID=<a class="code hl_variable" href="globals_8c.html#a12cad3af71cdd4091548db5fe25036a9">cursorP1ColorChoice</a>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].palID=<a class="code hl_variable" href="globals_8c.html#ab1d9589f28f9cba774668cb870258680">cursorP2ColorChoice</a>; </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].<span class="keywordtype">id</span>==<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].<span class="keywordtype">id</span> &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].palID==<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].palID)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="comment">//se ambos os players forem iguais e com a mesma paleta...</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].palID=1; <span class="comment">//Por padrao, P1 fica com a paleta 1</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].palID=2; <span class="comment">//Por padrao, P2 fica com a paleta 2 &#39;cor alternativa&#39;</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">//--P1--</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].<span class="keywordtype">id</span>== 1 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].palID==1){ PAL_setPalette(PAL2, spr_ryo_pal1.palette-&gt;data, CPU); } <span class="comment">//ryo</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].<span class="keywordtype">id</span>== 1 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].palID==2){ PAL_setPalette(PAL2, spr_ryo_pal2.palette-&gt;data, CPU); } <span class="comment">//ryo</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="comment">//--P2--</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].<span class="keywordtype">id</span>== 1 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].palID==1){ PAL_setPalette(PAL3, spr_ryo_pal1.palette-&gt;data, CPU); } <span class="comment">//ryo</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].<span class="keywordtype">id</span>== 1 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].palID==2){ PAL_setPalette(PAL3, spr_ryo_pal2.palette-&gt;data, CPU); } <span class="comment">//ryo</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">//AXIS</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span>(RELEASE==0)</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite = NULL; }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite){ SPR_releaseSprite(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite); <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite = NULL; }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite = SPR_addSprite(&amp;spr_point, <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].x-4, <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].y-5, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite = SPR_addSprite(&amp;spr_point, <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].x-4, <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].y-5, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite, 1455); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        SPR_setVRAMTileIndex(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite, 1455); <span class="comment">//define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        SPR_setVisibility(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite, HIDDEN);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        SPR_setVisibility(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite, HIDDEN);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="comment">//DEPTH</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[1].sprite, 1 );</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2].sprite, 2 );</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="comment">//depth 3 e 4 reservados</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].sprite){ SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[1].sprite,  5 ); } </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].sprite){ SPR_setDepth(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[2].sprite,  6 ); } </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="comment">//depth 7 e 8 reservados</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">//if(P[1].sombra){ SPR_setDepth(P[1].sombra, 98 ); }</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">//if(gSombraStyle==2){ SPR_setDepth(P[2].sombra, 99 ); }</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>}</div>
+</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="foldopen" id="foldopen00264" data-start="{" data-end="}">
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="init_8c.html#a6450a3496019d3dbd629a6a01b4c8ad0">  264</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="init_8c.html#a6450a3496019d3dbd629a6a01b4c8ad0">FUNCAO_ROUND_INIT</a>()</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>{</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <a class="code hl_variable" href="globals_8c.html#a7db0859ee62e2447701751d5980ede35">gPodeMover</a>=1;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
+</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="foldopen" id="foldopen00269" data-start="{" data-end="}">
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="init_8c.html#a7f26d724205f687db0cbd77631257773">  269</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="init_8c.html#a7f26d724205f687db0cbd77631257773">FUNCAO_ROUND_RESTART</a>()</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>{</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>}</div>
+</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="foldopen" id="foldopen00274" data-start="{" data-end="}">
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="init_8c.html#abc91f67f185063e878e79cebf91d246e">  274</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="init_8c.html#abc91f67f185063e878e79cebf91d246e">CLEAR_VDP</a>()</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>{</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    SYS_disableInts();</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>     SPR_reset();</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>     <span class="comment">//VDP_resetSprites();</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>     <span class="comment">//VDP_releaseAllSprites();</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>     <span class="comment">//SPR_defragVRAM();</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>     VDP_clearPlane(BG_A, TRUE);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>     VDP_clearPlane(BG_B, TRUE);    </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>     VDP_setTextPlane(BG_A);  </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>     VDP_setHorizontalScroll(BG_B, 0); </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>     VDP_setVerticalScroll(BG_B, 0); </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>     VDP_setHorizontalScroll(BG_A, 0); </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>     VDP_setVerticalScroll(BG_A, 0);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>     VDP_setBackgroundColor(0);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>     VDP_resetScreen();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>     <span class="comment">//PAL_setPaletteColors(0, (u16*) palette_black, CPU);</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    SYS_enableInts();</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <a class="code hl_variable" href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a>=0;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>}</div>
+</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">//EOF - END OF FILE; by GAMEDEVBOSS 2015-2022</span></div>
+<div class="ttc" id="aglobals_8c_html_a0c61fbef5a8f7340be9782d14b8296ba"><div class="ttname"><a href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a></div><div class="ttdeci">struct GraphicElementDEF GE[25]</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00150">globals.c:150</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a123c3ffe37b23dafc147e8c4bd8d558d"><div class="ttname"><a href="globals_8c.html#a123c3ffe37b23dafc147e8c4bd8d558d">Rect1BB1_Q2</a></div><div class="ttdeci">Sprite * Rect1BB1_Q2</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00089">globals.c:89</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a12cad3af71cdd4091548db5fe25036a9"><div class="ttname"><a href="globals_8c.html#a12cad3af71cdd4091548db5fe25036a9">cursorP1ColorChoice</a></div><div class="ttdeci">u8 cursorP1ColorChoice</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00060">globals.c:60</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a208dbd85c56bc5660552d2e52240bd54"><div class="ttname"><a href="globals_8c.html#a208dbd85c56bc5660552d2e52240bd54">Rect2BB1_Q2</a></div><div class="ttdeci">Sprite * Rect2BB1_Q2</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00091">globals.c:91</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a44a91575ebc8901fc142969405ca17b2"><div class="ttname"><a href="globals_8c.html#a44a91575ebc8901fc142969405ca17b2">Rect1BB1_Q3</a></div><div class="ttdeci">Sprite * Rect1BB1_Q3</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00089">globals.c:89</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a484d5d423cbda372b4cf0a2c733e0fd1"><div class="ttname"><a href="globals_8c.html#a484d5d423cbda372b4cf0a2c733e0fd1">Rect1BB1_Q1</a></div><div class="ttdeci">Sprite * Rect1BB1_Q1</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00089">globals.c:89</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a4b70e354d37b090ffe408c703a374b5c"><div class="ttname"><a href="globals_8c.html#a4b70e354d37b090ffe408c703a374b5c">frameAdvCounterP1</a></div><div class="ttdeci">int frameAdvCounterP1</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00050">globals.c:50</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a5247eaf92fd554713f0a10c89608d6de"><div class="ttname"><a href="globals_8c.html#a5247eaf92fd554713f0a10c89608d6de">gAlturaPiso</a></div><div class="ttdeci">u8 gAlturaPiso</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00032">globals.c:32</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a5651fe815d173a5a86a793b794d13ef3"><div class="ttname"><a href="globals_8c.html#a5651fe815d173a5a86a793b794d13ef3">gClockTimer</a></div><div class="ttdeci">s8 gClockTimer</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00018">globals.c:18</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a5aafcd8db9b652a58a6f2233f22b0bab"><div class="ttname"><a href="globals_8c.html#a5aafcd8db9b652a58a6f2233f22b0bab">Rect2HB1_Q2</a></div><div class="ttdeci">Sprite * Rect2HB1_Q2</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00092">globals.c:92</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a6b0492b82c6cf53fe356c13c9dc329ef"><div class="ttname"><a href="globals_8c.html#a6b0492b82c6cf53fe356c13c9dc329ef">Rect2HB1_Q1</a></div><div class="ttdeci">Sprite * Rect2HB1_Q1</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00092">globals.c:92</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a6b9b4efb441ee2a5a57747fc562966dc"><div class="ttname"><a href="globals_8c.html#a6b9b4efb441ee2a5a57747fc562966dc">Rect2BB1_Q1</a></div><div class="ttdeci">Sprite * Rect2BB1_Q1</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00091">globals.c:91</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a75f136ac10ebc3e4c92d0b8ef9ace440"><div class="ttname"><a href="globals_8c.html#a75f136ac10ebc3e4c92d0b8ef9ace440">Rect2HB1_Q4</a></div><div class="ttdeci">Sprite * Rect2HB1_Q4</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00092">globals.c:92</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a7db0859ee62e2447701751d5980ede35"><div class="ttname"><a href="globals_8c.html#a7db0859ee62e2447701751d5980ede35">gPodeMover</a></div><div class="ttdeci">bool gPodeMover</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00011">globals.c:11</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a7e2a9660c34e6b40d2df44aff1b909da"><div class="ttname"><a href="globals_8c.html#a7e2a9660c34e6b40d2df44aff1b909da">lastFrameAdvCounterP1</a></div><div class="ttdeci">int lastFrameAdvCounterP1</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00051">globals.c:51</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a934cb595ca1509269398cc5b33679a10"><div class="ttname"><a href="globals_8c.html#a934cb595ca1509269398cc5b33679a10">Rect2BB1_Q3</a></div><div class="ttdeci">Sprite * Rect2BB1_Q3</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00091">globals.c:91</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a99a396bbf6472d01ce3cd6b14b68668b"><div class="ttname"><a href="globals_8c.html#a99a396bbf6472d01ce3cd6b14b68668b">Rect2HB1_Q3</a></div><div class="ttdeci">Sprite * Rect2HB1_Q3</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00092">globals.c:92</a></div></div>
+<div class="ttc" id="aglobals_8c_html_a9a5a6215707f5795c18f46c7cef8c2fd"><div class="ttname"><a href="globals_8c.html#a9a5a6215707f5795c18f46c7cef8c2fd">gBG_Width</a></div><div class="ttdeci">u16 gBG_Width</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00038">globals.c:38</a></div></div>
+<div class="ttc" id="aglobals_8c_html_aa2d51ef9576be55b8a1ff672efbd0009"><div class="ttname"><a href="globals_8c.html#aa2d51ef9576be55b8a1ff672efbd0009">gScrollValue</a></div><div class="ttdeci">s16 gScrollValue</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00043">globals.c:43</a></div></div>
+<div class="ttc" id="aglobals_8c_html_aa63e5fde938bd69af9c1ff953391fb06"><div class="ttname"><a href="globals_8c.html#aa63e5fde938bd69af9c1ff953391fb06">frameAdvCounterP2</a></div><div class="ttdeci">int frameAdvCounterP2</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00052">globals.c:52</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ab1d9589f28f9cba774668cb870258680"><div class="ttname"><a href="globals_8c.html#ab1d9589f28f9cba774668cb870258680">cursorP2ColorChoice</a></div><div class="ttdeci">u8 cursorP2ColorChoice</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00065">globals.c:65</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ab8ca96f98551dde009842a3c7449d251"><div class="ttname"><a href="globals_8c.html#ab8ca96f98551dde009842a3c7449d251">Rect1HB1_Q3</a></div><div class="ttdeci">Sprite * Rect1HB1_Q3</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00090">globals.c:90</a></div></div>
+<div class="ttc" id="aglobals_8c_html_abafd39367d230d99bb9c581019b6d387"><div class="ttname"><a href="globals_8c.html#abafd39367d230d99bb9c581019b6d387">Rect2BB1_Q4</a></div><div class="ttdeci">Sprite * Rect2BB1_Q4</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00091">globals.c:91</a></div></div>
+<div class="ttc" id="aglobals_8c_html_abb831196d216e00c50fef2086d8850b2"><div class="ttname"><a href="globals_8c.html#abb831196d216e00c50fef2086d8850b2">Rect1BB1_Q4</a></div><div class="ttdeci">Sprite * Rect1BB1_Q4</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00089">globals.c:89</a></div></div>
+<div class="ttc" id="aglobals_8c_html_abc4da9eec154673e173b44efbb6e0ae9"><div class="ttname"><a href="globals_8c.html#abc4da9eec154673e173b44efbb6e0ae9">lastFrameAdvCounterP2</a></div><div class="ttdeci">int lastFrameAdvCounterP2</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00053">globals.c:53</a></div></div>
+<div class="ttc" id="aglobals_8c_html_abf0a803c9f19fa09bc230ae54a46bb4c"><div class="ttname"><a href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a></div><div class="ttdeci">u8 i</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00005">globals.c:5</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ac38651c6feb8ae2d678984cfb697ba03"><div class="ttname"><a href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a></div><div class="ttdeci">struct PlayerDEF P[3]</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00149">globals.c:149</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ac5c9f7210c7cb249636b7f1dc0121b71"><div class="ttname"><a href="globals_8c.html#ac5c9f7210c7cb249636b7f1dc0121b71">gInd_tileset</a></div><div class="ttdeci">u16 gInd_tileset</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00025">globals.c:25</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ace5a7729e83a882830f502bc227ab5b0"><div class="ttname"><a href="globals_8c.html#ace5a7729e83a882830f502bc227ab5b0">Rect1HB1_Q1</a></div><div class="ttdeci">Sprite * Rect1HB1_Q1</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00090">globals.c:90</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ad170be56c192cadeaac3dace325d637d"><div class="ttname"><a href="globals_8c.html#ad170be56c192cadeaac3dace325d637d">gClockRTimer</a></div><div class="ttdeci">s8 gClockRTimer</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00020">globals.c:20</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ad3529cdb19c88c789b880e8e4968f735"><div class="ttname"><a href="globals_8c.html#ad3529cdb19c88c789b880e8e4968f735">Rect1HB1_Q2</a></div><div class="ttdeci">Sprite * Rect1HB1_Q2</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00090">globals.c:90</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ae03addf30e910bb48ee839e924562313"><div class="ttname"><a href="globals_8c.html#ae03addf30e910bb48ee839e924562313">gClockLTimer</a></div><div class="ttdeci">s8 gClockLTimer</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00019">globals.c:19</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ae52d60a289b03a148ab9a58ac7f20e99"><div class="ttname"><a href="globals_8c.html#ae52d60a289b03a148ab9a58ac7f20e99">gBG_Choice</a></div><div class="ttdeci">u8 gBG_Choice</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00044">globals.c:44</a></div></div>
+<div class="ttc" id="aglobals_8c_html_aede770889dc166adf3db94177cfcaa66"><div class="ttname"><a href="globals_8c.html#aede770889dc166adf3db94177cfcaa66">gRound</a></div><div class="ttdeci">u8 gRound</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00021">globals.c:21</a></div></div>
+<div class="ttc" id="aglobals_8c_html_af7a30f8cde192d18da41636ff5053d0e"><div class="ttname"><a href="globals_8c.html#af7a30f8cde192d18da41636ff5053d0e">Rect1HB1_Q4</a></div><div class="ttdeci">Sprite * Rect1HB1_Q4</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00090">globals.c:90</a></div></div>
+<div class="ttc" id="aglobals_8c_html_af9161c41cf984be2afa953b0311565b9"><div class="ttname"><a href="globals_8c.html#af9161c41cf984be2afa953b0311565b9">doubleHitStep</a></div><div class="ttdeci">u8 doubleHitStep</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00006">globals.c:6</a></div></div>
+<div class="ttc" id="ainit_8c_html_a6450a3496019d3dbd629a6a01b4c8ad0"><div class="ttname"><a href="init_8c.html#a6450a3496019d3dbd629a6a01b4c8ad0">FUNCAO_ROUND_INIT</a></div><div class="ttdeci">void FUNCAO_ROUND_INIT()</div><div class="ttdef"><b>Definição</b> <a href="#l00264">init.c:264</a></div></div>
+<div class="ttc" id="ainit_8c_html_a7f26d724205f687db0cbd77631257773"><div class="ttname"><a href="init_8c.html#a7f26d724205f687db0cbd77631257773">FUNCAO_ROUND_RESTART</a></div><div class="ttdeci">void FUNCAO_ROUND_RESTART()</div><div class="ttdef"><b>Definição</b> <a href="#l00269">init.c:269</a></div></div>
+<div class="ttc" id="ainit_8c_html_abc91f67f185063e878e79cebf91d246e"><div class="ttname"><a href="init_8c.html#abc91f67f185063e878e79cebf91d246e">CLEAR_VDP</a></div><div class="ttdeci">void CLEAR_VDP()</div><div class="ttdef"><b>Definição</b> <a href="#l00274">init.c:274</a></div></div>
+<div class="ttc" id="ainit_8c_html_aed24219971f7ba81ad8f567b2129a68d"><div class="ttname"><a href="init_8c.html#aed24219971f7ba81ad8f567b2129a68d">FUNCAO_INICIALIZACAO</a></div><div class="ttdeci">void FUNCAO_INICIALIZACAO()</div><div class="ttdef"><b>Definição</b> <a href="#l00007">init.c:7</a></div></div>
+<div class="ttc" id="aplayer_8c_html_afc38b16c5646448129cadbef7e651a46"><div class="ttname"><a href="player_8c.html#afc38b16c5646448129cadbef7e651a46">PLAYER_STATE</a></div><div class="ttdeci">void PLAYER_STATE(u8 Player, u16 State)</div><div class="ttdef"><b>Definição</b> <a href="player_8c_source.html#l00009">player.c:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

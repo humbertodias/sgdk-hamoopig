@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SGDK Hamoopig: Referência do Arquivo src/hud.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SGDK Hamoopig
+   </div>
+   <div id="projectbrief">Documentação gerada automaticamente com Doxygen</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo hud.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;genesis.h&gt;</code><br />
+<code>#include &quot;hud.h&quot;</code><br />
+<code>#include &quot;globals.h&quot;</code><br />
+<code>#include &quot;sprite.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para hud.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="hud_8c__incl.png" border="0" usemap="#asrc_2hud_8c" alt=""/></div>
+<map name="asrc_2hud_8c" id="asrc_2hud_8c">
+<area shape="rect" title=" " alt="" coords="146,5,223,35"/>
+<area shape="rect" title=" " alt="" coords="5,83,86,113"/>
+<area shape="poly" title=" " alt="" coords="159,38,86,78,83,73,157,33"/>
+<area shape="rect" title=" " alt="" coords="110,83,168,113"/>
+<area shape="poly" title=" " alt="" coords="178,37,157,71,153,68,173,34"/>
+<area shape="rect" title=" " alt="" coords="191,83,268,113"/>
+<area shape="poly" title=" " alt="" coords="195,34,215,68,211,71,190,37"/>
+<area shape="rect" title=" " alt="" coords="292,83,362,113"/>
+<area shape="poly" title=" " alt="" coords="212,33,288,73,285,78,210,38"/>
+</map>
+</div>
+</div>
+<p><a href="hud_8c_source.html">Ir para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:afbab9a78913dda4258fdf813b1e5b02d" id="r_afbab9a78913dda4258fdf813b1e5b02d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbab9a78913dda4258fdf813b1e5b02d">FUNCAO_RELOGIO</a> ()</td></tr>
+<tr class="separator:afbab9a78913dda4258fdf813b1e5b02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b5307c825fb9571b9b1c276c1def22" id="r_a80b5307c825fb9571b9b1c276c1def22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80b5307c825fb9571b9b1c276c1def22">FUNCAO_BARRAS_DE_ENERGIA</a> ()</td></tr>
+<tr class="separator:a80b5307c825fb9571b9b1c276c1def22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="a80b5307c825fb9571b9b1c276c1def22" name="a80b5307c825fb9571b9b1c276c1def22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b5307c825fb9571b9b1c276c1def22">&#9670;&#160;</a></span>FUNCAO_BARRAS_DE_ENERGIA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FUNCAO_BARRAS_DE_ENERGIA </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definição na linha <a class="el" href="hud_8c_source.html#l00066">66</a> do arquivo <a class="el" href="hud_8c_source.html">hud.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>{</div>
+<div class="line"><span class="lineno">   68</span>    </div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">for</span>(<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>=1; <a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>&lt;=2; <a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>++)</div>
+<div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia != <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energiaBase )</div>
+<div class="line"><span class="lineno">   72</span>        { </div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia &gt; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energiaBase){ <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia--; } <span class="comment">//decrementa a &#39;energia&#39; aos poucos, até igualar a &#39;energiaBase&#39;</span></div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia &lt; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energiaBase){ <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia++; } <span class="comment">//incrementa a &#39;energia&#39; aos poucos, até igualar a &#39;energiaBase&#39;</span></div>
+<div class="line"><span class="lineno">   75</span>        } </div>
+<div class="line"><span class="lineno">   76</span>        </div>
+<div class="line"><span class="lineno">   77</span>        u8 subEnergyPos;</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span>(                           <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia== 96){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 0); subEnergyPos= 0;</div>
+<div class="line"><span class="lineno">   81</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  96 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 88){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 1); subEnergyPos= 1;</div>
+<div class="line"><span class="lineno">   82</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  88 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 80){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 2); subEnergyPos= 2;</div>
+<div class="line"><span class="lineno">   83</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  80 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 72){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 3); subEnergyPos= 3;</div>
+<div class="line"><span class="lineno">   84</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  72 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 64){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 4); subEnergyPos= 4;</div>
+<div class="line"><span class="lineno">   85</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  64 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 56){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 5); subEnergyPos= 5;</div>
+<div class="line"><span class="lineno">   86</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  56 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 48){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 6); subEnergyPos= 6;</div>
+<div class="line"><span class="lineno">   87</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  48 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 40){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 7); subEnergyPos= 7;</div>
+<div class="line"><span class="lineno">   88</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  40 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 32){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 8); subEnergyPos= 8;</div>
+<div class="line"><span class="lineno">   89</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  32 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 24){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, 9); subEnergyPos= 9;</div>
+<div class="line"><span class="lineno">   90</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  24 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;= 16){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0,10); subEnergyPos=10;</div>
+<div class="line"><span class="lineno">   91</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;  16 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;=  8){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0,11); subEnergyPos=11;</div>
+<div class="line"><span class="lineno">   92</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&lt;   8 &amp;&amp; <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia&gt;=  1){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0,12); subEnergyPos=12;</div>
+<div class="line"><span class="lineno">   93</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(                     <a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia==  0){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[2+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0,12); subEnergyPos=12;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[4+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>==1){ SPR_setPosition(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[4+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite,  40+(subEnergyPos*8), 12); }</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>==2){ SPR_setPosition(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[4+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 280-(subEnergyPos*8), 12); }</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        </div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">int</span> a=0;</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span>(subEnergyPos== 0){ a= 96; }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span>(subEnergyPos== 1){ a= 88; }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span>(subEnergyPos== 2){ a= 80; }</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span>(subEnergyPos== 3){ a= 72; }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span>(subEnergyPos== 4){ a= 64; }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span>(subEnergyPos== 5){ a= 56; }</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span>(subEnergyPos== 6){ a= 48; }</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span>(subEnergyPos== 7){ a= 40; }</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span>(subEnergyPos== 8){ a= 32; }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span>(subEnergyPos== 9){ a= 24; }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span>(subEnergyPos==10){ a= 16; }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span>(subEnergyPos==11){ a=  8; }</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span>(subEnergyPos==12){ a=  0; }</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[4+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite){ SPR_setAnimAndFrame(<a class="code hl_variable" href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a>[4+<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].sprite, 0, (<a class="code hl_variable" href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a>[<a class="code hl_variable" href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a>].energia-a) ); }</div>
+<div class="line"><span class="lineno">  117</span>        </div>
+<div class="line"><span class="lineno">  118</span>        <span class="comment">//Exibe a barra de especial, e fica piscando, caso seja == 32</span></div>
+<div class="line"><span class="lineno">  119</span>        <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  120</span><span class="comment">        if(P[i].energiaSP&lt;32)</span></div>
+<div class="line"><span class="lineno">  121</span><span class="comment">        {</span></div>
+<div class="line"><span class="lineno">  122</span><span class="comment">            SPR_setAnimAndFrame(GE[6+i].sprite, 0, P[i].energiaSP);</span></div>
+<div class="line"><span class="lineno">  123</span><span class="comment">        }else{</span></div>
+<div class="line"><span class="lineno">  124</span><span class="comment">            if(gPing2==1){</span></div>
+<div class="line"><span class="lineno">  125</span><span class="comment">                SPR_setAnimAndFrame(GE[6+i].sprite, 0, 32);</span></div>
+<div class="line"><span class="lineno">  126</span><span class="comment">            }else{</span></div>
+<div class="line"><span class="lineno">  127</span><span class="comment">                SPR_setAnimAndFrame(GE[6+i].sprite, 0, 33);</span></div>
+<div class="line"><span class="lineno">  128</span><span class="comment">            }</span></div>
+<div class="line"><span class="lineno">  129</span><span class="comment">        }</span></div>
+<div class="line"><span class="lineno">  130</span><span class="comment">        */</span></div>
+<div class="line"><span class="lineno">  131</span>        </div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span>    </div>
+<div class="line"><span class="lineno">  134</span>    <span class="comment">//if(P[1].energiaSP&gt;=32){ SPR_setVisibility(GE[ 9].sprite, VISIBLE); }else{ SPR_setVisibility(GE[ 9].sprite, HIDDEN); }</span></div>
+<div class="line"><span class="lineno">  135</span>    <span class="comment">//if(P[2].energiaSP&gt;=32){ SPR_setVisibility(GE[10].sprite, VISIBLE); }else{ SPR_setVisibility(GE[10].sprite, HIDDEN); }</span></div>
+<div class="line"><span class="lineno">  136</span>    </div>
+<div class="line"><span class="lineno">  137</span>}</div>
+<div class="ttc" id="aglobals_8c_html_a0c61fbef5a8f7340be9782d14b8296ba"><div class="ttname"><a href="globals_8c.html#a0c61fbef5a8f7340be9782d14b8296ba">GE</a></div><div class="ttdeci">struct GraphicElementDEF GE[25]</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00150">globals.c:150</a></div></div>
+<div class="ttc" id="aglobals_8c_html_abf0a803c9f19fa09bc230ae54a46bb4c"><div class="ttname"><a href="globals_8c.html#abf0a803c9f19fa09bc230ae54a46bb4c">i</a></div><div class="ttdeci">u8 i</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00005">globals.c:5</a></div></div>
+<div class="ttc" id="aglobals_8c_html_ac38651c6feb8ae2d678984cfb697ba03"><div class="ttname"><a href="globals_8c.html#ac38651c6feb8ae2d678984cfb697ba03">P</a></div><div class="ttdeci">struct PlayerDEF P[3]</div><div class="ttdef"><b>Definição</b> <a href="globals_8c_source.html#l00149">globals.c:149</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hud_8c_a80b5307c825fb9571b9b1c276c1def22_icgraph.png" border="0" usemap="#ahud_8c_a80b5307c825fb9571b9b1c276c1def22_icgraph" alt=""/></div>
+<map name="ahud_8c_a80b5307c825fb9571b9b1c276c1def22_icgraph" id="ahud_8c_a80b5307c825fb9571b9b1c276c1def22_icgraph">
+<area shape="rect" title=" " alt="" coords="105,5,320,35"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,57,35"/>
+<area shape="poly" title=" " alt="" coords="89,23,57,23,57,18,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afbab9a78913dda4258fdf813b1e5b02d" name="afbab9a78913dda4258fdf813b1e5b02d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbab9a78913dda4258fdf813b1e5b02d">&#9670;&#160;</a></span>FUNCAO_RELOGIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FUNCAO_RELOGIO </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definição na linha <a class="el" href="hud_8c_source.html#l00006">6</a> do arquivo <a class="el" href="hud_8c_source.html">hud.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>{</div>
+<div class="line"><span class="lineno">    8</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment">    if(gClockTimer&gt;0 &amp;&amp; (gClockLTimer&gt;0 || gClockRTimer&gt;0) &amp;&amp; (P[1].energiaBase&gt;0 &amp;&amp; P[2].energiaBase&gt;0) ){ gClockTimer--; }</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment">    //temporario</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment">    if(gClockLTimer==0 &amp;&amp; gClockRTimer==1){ gClockLTimer=9; gClockRTimer=9; }</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment">    </span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment">    if(gClockTimer==0)</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment">    {</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment">        gClockRTimer--;</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment">        SPR_releaseSprite(ClockR);</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment">        if(gClockRTimer==9){ ClockR = SPR_addSpriteEx(&amp;spr_n9, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment">        if(gClockRTimer==8){ ClockR = SPR_addSpriteEx(&amp;spr_n8, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   19</span><span class="comment">        if(gClockRTimer==7){ ClockR = SPR_addSpriteEx(&amp;spr_n7, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   20</span><span class="comment">        if(gClockRTimer==6){ ClockR = SPR_addSpriteEx(&amp;spr_n6, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment">        if(gClockRTimer==5){ ClockR = SPR_addSpriteEx(&amp;spr_n5, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment">        if(gClockRTimer==4){ ClockR = SPR_addSpriteEx(&amp;spr_n4, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment">        if(gClockRTimer==3){ ClockR = SPR_addSpriteEx(&amp;spr_n3, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment">        if(gClockRTimer==2){ ClockR = SPR_addSpriteEx(&amp;spr_n2, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment">        if(gClockRTimer==1){ ClockR = SPR_addSpriteEx(&amp;spr_n1, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment">        if(gClockRTimer==0){ ClockR = SPR_addSpriteEx(&amp;spr_n0, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment">        SPR_setVRAMTileIndex(ClockR, 1447); //define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment">        if(ClockR){ SPR_setDepth(ClockR, 255); }</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment">        </span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment">        if(gClockRTimer==-1)</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment">        {</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment">            if(gClockLTimer&gt;0)</span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment">            {</span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment">                gClockLTimer--;</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment">                SPR_releaseSprite(ClockL);</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment">                if(gClockLTimer==9){ ClockL = SPR_addSpriteEx(&amp;spr_n9, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment">                if(gClockLTimer==8){ ClockL = SPR_addSpriteEx(&amp;spr_n8, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment">                if(gClockLTimer==7){ ClockL = SPR_addSpriteEx(&amp;spr_n7, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment">                if(gClockLTimer==6){ ClockL = SPR_addSpriteEx(&amp;spr_n6, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment">                if(gClockLTimer==5){ ClockL = SPR_addSpriteEx(&amp;spr_n5, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   41</span><span class="comment">                if(gClockLTimer==4){ ClockL = SPR_addSpriteEx(&amp;spr_n4, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   42</span><span class="comment">                if(gClockLTimer==3){ ClockL = SPR_addSpriteEx(&amp;spr_n3, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   43</span><span class="comment">                if(gClockLTimer==2){ ClockL = SPR_addSpriteEx(&amp;spr_n2, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   44</span><span class="comment">                if(gClockLTimer==1){ ClockL = SPR_addSpriteEx(&amp;spr_n1, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   45</span><span class="comment">                if(gClockLTimer==0){ ClockL = SPR_addSpriteEx(&amp;spr_n0, 146, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD); }</span></div>
+<div class="line"><span class="lineno">   46</span><span class="comment">                SPR_setVRAMTileIndex(ClockL, 1441); //define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><span class="lineno">   47</span><span class="comment">                gClockRTimer=9;</span></div>
+<div class="line"><span class="lineno">   48</span><span class="comment">                SPR_releaseSprite(ClockR);</span></div>
+<div class="line"><span class="lineno">   49</span><span class="comment">                ClockR = SPR_addSpriteEx(&amp;spr_n9, 161, 22, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);</span></div>
+<div class="line"><span class="lineno">   50</span><span class="comment">                SPR_setVRAMTileIndex(ClockR, 1447); //define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><span class="lineno">   51</span><span class="comment">                if(ClockL){ SPR_setDepth(ClockL, 255); }</span></div>
+<div class="line"><span class="lineno">   52</span><span class="comment">            }</span></div>
+<div class="line"><span class="lineno">   53</span><span class="comment">        }</span></div>
+<div class="line"><span class="lineno">   54</span><span class="comment">        gClockTimer=38; //reset Clock Count timer</span></div>
+<div class="line"><span class="lineno">   55</span><span class="comment">    }</span></div>
+<div class="line"><span class="lineno">   56</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">   57</span>    </div>
+<div class="line"><span class="lineno">   58</span>    <span class="comment">//if(gClockRTimer==-1 &amp;&amp; gClockRTimer==-1)</span></div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment">//{ </span></div>
+<div class="line"><span class="lineno">   60</span>        <span class="comment">/*TIMER OVER!*/</span> </div>
+<div class="line"><span class="lineno">   61</span>        <span class="comment">//ClockR = SPR_addSpriteEx(&amp;spr_n0, 160, 32, TILE_ATTR(PAL1, FALSE, FALSE, FALSE), SPR_FLAG_DISABLE_DELAYED_FRAME_UPDATE | SPR_FLAG_AUTO_VISIBILITY | SPR_FLAG_AUTO_VRAM_ALLOC | SPR_FLAG_AUTO_TILE_UPLOAD);</span></div>
+<div class="line"><span class="lineno">   62</span>        <span class="comment">//SPR_setVRAMTileIndex(ClockR,1707); //define uma posicao especifica para o GFX na VRAM</span></div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment">//}</span></div>
+<div class="line"><span class="lineno">   64</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hud_8c_afbab9a78913dda4258fdf813b1e5b02d_icgraph.png" border="0" usemap="#ahud_8c_afbab9a78913dda4258fdf813b1e5b02d_icgraph" alt=""/></div>
+<map name="ahud_8c_afbab9a78913dda4258fdf813b1e5b02d_icgraph" id="ahud_8c_afbab9a78913dda4258fdf813b1e5b02d_icgraph">
+<area shape="rect" title=" " alt="" coords="105,5,242,35"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,57,35"/>
+<area shape="poly" title=" " alt="" coords="89,23,57,23,57,18,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
