@@ -4,7 +4,7 @@
 # Project related configuration options
 #--------------------------------------------------------------------------- 
 
-PROJECT_NAME           = "Mortal Kombat Plus"
+PROJECT_NAME           = "SGDK Hamoopig"
 PROJECT_BRIEF          = "Documentação gerada automaticamente com Doxygen"
 OUTPUT_DIRECTORY       = web
 CREATE_SUBDIRS         = NO
