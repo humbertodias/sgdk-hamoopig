@@ -13,6 +13,14 @@ res/sprites.h
 res/stages.h
 __MACOSX
 
+# Ignore generated resource files
+res/*.res
+res/*.h
+res/gfx/*
+res/sfx/*
+res/sprite/*
+!res/.gitkeep
+
 # Ignore everything inside web/doc and web/wasm
 web/doc/*
 web/wasm/*
