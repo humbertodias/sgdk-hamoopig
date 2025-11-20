@@ -30,7 +30,7 @@ run:
 	"${RETROARCH}" -L "${CORE}" out/rom.bin
 	
 zip:
-	zip -9 -j mk-plus-$(TAG_NAME).zip out/rom.bin
+	zip -9 -j sgdk-hamoopig-$(TAG_NAME).zip out/rom.bin
 
 doc:
 	$(DOCKER) run --rm -u $(UID):$(GID) -v "${PWD}":/workdir -w /workdir nakatt/doxygen
