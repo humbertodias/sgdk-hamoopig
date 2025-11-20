@@ -13,7 +13,7 @@ ifeq ($(UNAME_S),Darwin)
 	CORE := genesis_plus_gx
 endif
 
-.PHONY: compile
+.PHONY: doc
 compile:
 	docker run --rm --user ${UID}:${GID} -v "${PWD}":/workdir -w /workdir ${DOCKER_IMAGE}
 
