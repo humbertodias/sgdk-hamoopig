@@ -34,10 +34,8 @@ jobs:
         if: "!startsWith(github.ref, 'refs/tags/')"
         uses: actions/upload-artifact@v5
         with:
-          name: sgdk-hamoopig-rom.zip
-          path: |
-            *.zip
-            !res.zip
+          name: sgdk-hamoopig-rom
+          path: sgdk-hamoopig-*.zip
 
       - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
@@ -45,6 +43,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: |
-            *.zip
-            !res.zip
+          path: sgdk-hamoopig-*.zip
