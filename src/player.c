@@ -3,6 +3,8 @@
 #include "globals.h"
 #include "sprite.h"
 #include "sound.h"
+#include "graphics.h"
+#include "fsm.h"
 
 void PLAYER_STATE(u8 Player, u16 State)
 {
