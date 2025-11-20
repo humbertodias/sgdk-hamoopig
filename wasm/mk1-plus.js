@@ -15,8 +15,8 @@
         // web worker
         PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
       }
-      var PACKAGE_NAME = './example/hamoopig.data';
-      var REMOTE_PACKAGE_BASE = 'hamoopig.data';
+      var PACKAGE_NAME = './example/mk1-plus.data';
+      var REMOTE_PACKAGE_BASE = 'mk1-plus.data';
       if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
         Module['locateFile'] = Module['locateFilePackage'];
         err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -155,10 +155,10 @@
             for (var i = 0; i < files.length; ++i) {
               DataRequest.prototype.requests[files[i].filename].onload();
             }
-                Module['removeRunDependency']('datafile_./example/hamoopig.data');
+                Module['removeRunDependency']('datafile_./example/mk1-plus.data');
 
       };
-      Module['addRunDependency']('datafile_./example/hamoopig.data');
+      Module['addRunDependency']('datafile_./example/mk1-plus.data');
     
       if (!Module.preloadResults) Module.preloadResults = {};
     
@@ -179,7 +179,7 @@
     }
   
    }
-   loadPackage({"files": [{"filename": "/rom.bin", "start": 0, "end": 917504}], "remote_package_size": 917504, "package_uuid": "a4d7a9e4-14b6-4162-bb18-563a2c35064e"});
+   loadPackage({"files": [{"filename": "/game_rom", "start": 0, "end": 917504}], "remote_package_size": 917504, "package_uuid": "8399dd14-0569-4104-9556-937ab38306a7"});
   
   })();
   

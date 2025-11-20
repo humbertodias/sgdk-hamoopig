@@ -1,0 +1,5 @@
+<map id="PlayerDEF" name="PlayerDEF">
+<area shape="rect" id="Node000001" title=" " alt="" coords="8,102,92,132"/>
+<area shape="rect" id="Node000002" href="$structFireballDEF.html" title=" " alt="" coords="5,5,95,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,51,53,102,47,102,47,51"/>
+</map>

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['joy1_5fa_0',['JOY1_A',['../main_8c.html#a2bccdde8d2847bdf4f349c44185300fe',1,'main.c']]],
+  ['joy1_5fb_1',['JOY1_B',['../main_8c.html#a065a59396ca8dfb73227a61fc9523351',1,'main.c']]],
+  ['joy1_5fc_2',['JOY1_C',['../main_8c.html#a5c72f29708e270d46213393cad003dc8',1,'main.c']]],
+  ['joy1_5fdown_3',['JOY1_DOWN',['../main_8c.html#a8dc9d6e3593fd22ccfd2b149de639812',1,'main.c']]],
+  ['joy1_5fleft_4',['JOY1_LEFT',['../main_8c.html#ab4a30dbbb5c5b8cfc2fd907a321265fe',1,'main.c']]],
+  ['joy1_5fmode_5',['JOY1_MODE',['../main_8c.html#a2dfd14155a9a2d5febe186c0b972d103',1,'main.c']]],
+  ['joy1_5fright_6',['JOY1_RIGHT',['../main_8c.html#aad5513f1e7cba8a82bfb8a9ad473e7ba',1,'main.c']]],
+  ['joy1_5fstart_7',['JOY1_START',['../main_8c.html#a8189fe38cfd9558ef2ea1ff4b4e1a2c8',1,'main.c']]],
+  ['joy1_5fup_8',['JOY1_UP',['../main_8c.html#a8174e79d91201940bb357b1a87a8d3cd',1,'main.c']]],
+  ['joy1_5fx_9',['JOY1_X',['../main_8c.html#af706162c73da4f0f8bdcaa586bddb369',1,'main.c']]],
+  ['joy1_5fy_10',['JOY1_Y',['../main_8c.html#ac43273133b01ceb37b4edeb785837d09',1,'main.c']]],
+  ['joy1_5fz_11',['JOY1_Z',['../main_8c.html#aba4f98a918c3cc1a3452369c6a3faa40',1,'main.c']]],
+  ['joy2_5fa_12',['JOY2_A',['../main_8c.html#a19e68eff624d54ffa8ff742141040e95',1,'main.c']]],
+  ['joy2_5fb_13',['JOY2_B',['../main_8c.html#ab8287cde41b9c424b67cdf3cc3f93a09',1,'main.c']]],
+  ['joy2_5fc_14',['JOY2_C',['../main_8c.html#a7e2f86abbf6da2bc3fdde439898c3487',1,'main.c']]],
+  ['joy2_5fdown_15',['JOY2_DOWN',['../main_8c.html#a6cf1a3e5c2901f2b2231007f938dbf17',1,'main.c']]],
+  ['joy2_5fleft_16',['JOY2_LEFT',['../main_8c.html#aa7e0d649c09249bc8e96a17b1f7d8243',1,'main.c']]],
+  ['joy2_5fmode_17',['JOY2_MODE',['../main_8c.html#a458809033794add1d3a6fc97264f277d',1,'main.c']]],
+  ['joy2_5fright_18',['JOY2_RIGHT',['../main_8c.html#af35cc51559434f21472aecfccb8f4f4f',1,'main.c']]],
+  ['joy2_5fstart_19',['JOY2_START',['../main_8c.html#ad91321b647ef5485038547376d60b59c',1,'main.c']]],
+  ['joy2_5fup_20',['JOY2_UP',['../main_8c.html#ae3775fd13ae0a042cadf5ff91d82d693',1,'main.c']]],
+  ['joy2_5fx_21',['JOY2_X',['../main_8c.html#a4e01d1b5f64517e071028ffe7ca6785b',1,'main.c']]],
+  ['joy2_5fy_22',['JOY2_Y',['../main_8c.html#a59cda5977a9b2c9a110593fe7d3f3ee4',1,'main.c']]],
+  ['joy2_5fz_23',['JOY2_Z',['../main_8c.html#a7bcdc7ff329c737ba3b9a844a308d233',1,'main.c']]],
+  ['joydirtimer_24',['joyDirTimer',['../structPlayerDEF.html#a5c68a72e972edc067f5044cb757cc1c3',1,'PlayerDEF']]]
+];

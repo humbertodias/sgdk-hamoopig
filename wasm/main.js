@@ -98,7 +98,7 @@ function run(gamePath) {
 
 const btn = document.querySelector("button");
 btn.addEventListener("click", function () {
-  run("rom.bin");
+  run("game_rom");
   document.querySelector("#loading").style.display = "block";
   btn.style.display = "none";
 });
