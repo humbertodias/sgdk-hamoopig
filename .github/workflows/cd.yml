@@ -43,4 +43,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: sgdk-hamoopig-*.zip
+          files: sgdk-hamoopig-*.zip
